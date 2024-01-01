@@ -30,8 +30,10 @@ chalk
 mongoose
 
 for detailed instructions on interacting with the API endpoints, please refer to the Postman documentation provided here:
+
 cards endpoint: https://documenter.getpostman.com/view/32051038/2s9YsDmFCU
 users endpoint: https://documenter.getpostman.com/view/32051038/2s9YsDmFCV 
+
 
 USERS you can check my project with:
 
@@ -44,5 +46,4 @@ email: "ori@gmail.com" password: "123456aA!"
 admin user:
 email: "admin@gmail.com" password: "123456aA!"
 
-admin user:
-email: "admin@gmail.com" password: "123456aA!"
+
