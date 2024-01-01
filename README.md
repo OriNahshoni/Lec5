@@ -34,5 +34,12 @@ cards endpoint: https://documenter.getpostman.com/view/32051038/2s9YsDmFCU
 users endpoint: https://documenter.getpostman.com/view/32051038/2s9YsDmFCV 
 
 USERS you can check my project with:
-regular user: 
+
+regular user:
 email: "Willis@batcave.com" password: "123456aA!"
+
+business user:
+email: "ori@gmail.com" password: "123456aA!"
+
+admin user:
+email: "admin@gmail.com" password: "123456aA!"
