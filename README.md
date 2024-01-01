@@ -2,7 +2,7 @@ Ori-Rest-API
 
 Introduction:
 
-In this project iv'e developed a server-side application for an internet platform that controlled by an admin user and enables business users to publish, edit, and delete content, and regular users to watch it. 
+In this project Iv'e developed a server-side application for an internet platform that controlled by an admin user and enables business users to publish, edit, and delete content, and regular users to watch it. 
 The core focus is on building a clean and efficient RESTful API using Node.js and Express, with MongoDB as the underlying database.
 
 Technologies Used:
@@ -40,6 +40,9 @@ email: "Willis@batcave.com" password: "123456aA!"
 
 business user:
 email: "ori@gmail.com" password: "123456aA!"
+
+admin user:
+email: "admin@gmail.com" password: "123456aA!"
 
 admin user:
 email: "admin@gmail.com" password: "123456aA!"
