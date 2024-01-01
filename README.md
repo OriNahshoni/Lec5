@@ -32,6 +32,7 @@ mongoose
 for detailed instructions on interacting with the API endpoints, please refer to the Postman documentation provided here:
 
 cards endpoint: https://documenter.getpostman.com/view/32051038/2s9YsDmFCU
+
 users endpoint: https://documenter.getpostman.com/view/32051038/2s9YsDmFCV 
 
 
