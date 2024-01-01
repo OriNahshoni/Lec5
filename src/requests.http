@@ -1,0 +1,170 @@
+  ### GET All users:
+GET http://localhost:8080/api/v1/users
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTcwMzY3OTU5NH0.heCBF9h2Im1p6cjJKmWpo8u6TrOe8cGNhJ2NEivjBPk
+
+
+### Add a user:
+POST http://localhost:8080/api/v1/users
+Content-Type: application/json
+
+{
+  "name": {
+    "first": "avi",
+    "last": "Nahshoni"
+  },
+   "address": {
+    "street": "Shita",
+    "city": "Ein Habsor",
+    "country": "Israel",
+    "houseNumber": 20,
+    "zip": "12345"
+  },
+  "image": {
+    "alt": "user-profile",
+    "url": "https://picsum.photos/200/300"
+  },
+  "phone": "050-8123091",
+  "email": "avi@gmail.com",
+  "isBusiness": true,
+  "password": "123456aA!" 
+}
+
+
+### Login:
+POST http://localhost:8080/api/v1/users/login
+Content-Type: application/json
+
+{
+  "email": "admin@gmail.com",
+  "password": "123456aA!"
+}
+
+
+### get user by id with JWT of admin :
+GET http://localhost:8080/api/v1/users/657ea4a531137a1eeffe95aa
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTcwMzY3OTU5NH0.heCBF9h2Im1p6cjJKmWpo8u6TrOe8cGNhJ2NEivjBPk
+
+
+### GET user by id with jwt of the same user
+GET http://localhost:8080/api/v1/users/65784e92085dc1e983b77c0b
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkFsYnVtQGJhdGNhdmUuY29tIiwiaWF0IjoxNzAzOTQ0NjIwfQ.tD5-lOysWK3aGZD6UoV7ngXwxI6ITSkhWyrfjkEuuII
+
+
+### PUT user with JWT of the same user:
+PUT http://localhost:8080/api/v1/users/658c1b56538163cbc7959e37
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IldheW5lQGJhdGNhdmUuY29tIiwiaWF0IjoxNzAzNjgwNDg5fQ.2_0k8uAr-Zw69B1e55vpcQEfx3_6d8E7fKk1F7CQ0rM
+Content-Type: application/json
+
+{
+  "name": {
+    "first": "Bruce!",
+    "last": "Wayne!!!"
+  },
+  "address": {
+    "street": "123 Main St",
+    "city": "Anytown",
+    "country": "Israel",
+    "houseNumber": 20,
+    "zip": "12345"
+  },
+  "image": {
+    "alt": "user-profile",
+    "url": "https://picsum.photos/200/300"
+  },
+  "phone": "050-8123091",
+  "email": "Wayne@batcave.com",
+  "isBusiness": true,
+  "password": "123456aA!" 
+}
+
+### PATCH user business status with JWT of the same user:
+PATCH  http://localhost:8080/api/v1/users/658c1b56538163cbc7959e37
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IldheW5lQGJhdGNhdmUuY29tIiwiaWF0IjoxNzAzNjgwNDg5fQ.2_0k8uAr-Zw69B1e55vpcQEfx3_6d8E7fKk1F7CQ0rM
+Content-Type: application/json
+
+{ 
+  "isBusiness": true
+}
+
+### DELETE  user with JWT of the same user:
+DELETE http://localhost:8080/api/v1/users/658c1b56538163cbc7959e37
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IldheW5lQGJhdGNhdmUuY29tIiwiaWF0IjoxNzAzNjgwNDg5fQ.2_0k8uAr-Zw69B1e55vpcQEfx3_6d8E7fKk1F7CQ0rM
+
+
+### DELETE  user with JWT of Admin:
+DELETE http://localhost:8080/api/v1/users/658c1b56538163cbc7959e37
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTcwMzY3OTU5NH0.heCBF9h2Im1p6cjJKmWpo8u6TrOe8cGNhJ2NEivjBPk
+
+
+
+### add a card: ### new card
+POST http://localhost:8080/api/v1/cards
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9yaUBnbWFpbC5jb20iLCJpYXQiOjE3MDM2ODcxNTV9.FhhSx3xBbERiY9EL68dBxpoxfcw9WkhpsJOq5V8XtTY
+Content-Type: application/json
+
+{
+    "title": "doctor sus",
+    "subtitle": "new card ",
+    "description": "new card description",
+    "phone": "050-1234567",
+    "email": "doc@gamil.com",
+    "web": "http://www.google.com",
+    "address": {
+        "city": "new city",
+        "country": "new country",
+        "street": "new street",
+        "houseNumber": 21
+    }
+    
+}
+
+
+### Get all cards:
+GET http://localhost:8080/api/v1/cards
+
+### Get my-cards:
+GET http://localhost:8080/api/v1/cards/my-cards
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9yaUBnbWFpbC5jb20iLCJpYXQiOjE3MDM2ODcxNTV9.FhhSx3xBbERiY9EL68dBxpoxfcw9WkhpsJOq5V8XtTY
+
+### GET Card by id:
+GET http://localhost:8080/api/v1/cards/658c33416a38faa4996db0bd
+
+### PUT  Edit the card:
+PUT http://localhost:8080/api/v1/cards/658c344f6a38faa4996db0d2
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9yaUBnbWFpbC5jb20iLCJpYXQiOjE3MDM2ODcxNTV9.FhhSx3xBbERiY9EL68dBxpoxfcw9WkhpsJOq5V8XtTY
+Content-Type: application/json
+
+{
+    "title": "try to edit",
+    "subtitle": "new card ",
+    "description": "new card description",
+    "phone": "050-1234567",
+    "email": "ori@gamil.com",
+    "web": "http://www.google.com",
+    "address": {
+        "city": "new city",
+        "country": "new country",
+        "street": "new street",
+        "houseNumber": 21
+    }
+    
+}
+
+### DELETE a card by the creator:
+DELETE http://localhost:8080/api/v1/cards/659164332181c48ed9752a87
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9yaUBnbWFpbC5jb20iLCJpYXQiOjE3MDM2ODcxNTV9.FhhSx3xBbERiY9EL68dBxpoxfcw9WkhpsJOq5V8XtTY
+
+### Like card:
+PATCH  http://localhost:8080/api/v1/cards/658c344f6a38faa4996db0d2
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9yaUBnbWFpbC5jb20iLCJpYXQiOjE3MDM2ODcxNTV9.FhhSx3xBbERiY9EL68dBxpoxfcw9WkhpsJOq5V8XtTY
+
+
+### Change bizNumber by admin:
+PATCH http://localhost:8080/api/v1/cards/bizNumber/658c32c56a38faa4996db0b7
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTcwMzY3OTU5NH0.heCBF9h2Im1p6cjJKmWpo8u6TrOe8cGNhJ2NEivjBPk
+Content-Type: application/json
+
+{
+  "bizNumber": 4255654555591
+}
+gg
